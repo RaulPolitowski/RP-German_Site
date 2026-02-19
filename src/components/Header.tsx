@@ -45,7 +45,7 @@ export default function Header() {
             : "bg-white/80 backdrop-blur-md"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-5 flex items-center justify-between h-14">
           <a
             href="/"
             onClick={(e) => {

@@ -19,15 +19,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center pt-16 pb-4 overflow-hidden">
+    <section id="hero" className="relative min-h-[80vh] flex items-center pt-14 pb-0 overflow-hidden">
       <div className="tech-grid absolute inset-0 pointer-events-none" />
       <div className="glow-orb absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-400/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-orb absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] bg-violet-400/10 rounded-full blur-[100px] pointer-events-none" style={{ animationDelay: "3s" }} />
 
-      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center w-full">
+      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-6 lg:gap-4 items-center w-full">
         {/* Text */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative z-[2]">
-          <div className="flex flex-wrap items-center gap-2.5 mb-6">
+          <div className="flex flex-wrap items-center gap-2.5 mb-4">
             <span className="relative overflow-hidden bg-purple-600 text-white text-xs font-black px-3.5 py-1.5 rounded-md tracking-wide uppercase">
               17+ anos
               <span className="badge-shimmer absolute inset-0 pointer-events-none" />
@@ -35,20 +35,21 @@ export default function Hero() {
             <span className="bg-emerald-600 text-white text-xs font-black px-3.5 py-1.5 rounded-md tracking-wide uppercase flex items-center gap-1.5">
               🇧🇷 Todo o Brasil
             </span>
-            <span className="text-gray-500 text-sm font-bold">+5.000 empresas confiam na GermanTech</span>
+            <span className="text-gray-500 text-sm md:text-base font-bold">+5.000 empresas confiam na GermanTech</span>
           </div>
 
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] text-gray-900 mb-5">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.08] text-gray-900 mb-4">
             Eleve seu Negócio:{" "}
             <span className="gradient-text">Sistema de Gestão Empresarial</span>
           </h1>
 
-          <p className="text-lg text-gray-500 mb-4 max-w-lg leading-relaxed">
-            Emita notas. Controle o caixa. Organize o estoque.<br />
-            Sistema inteligente, simples e com suporte especializado.
+          <p className="text-lg md:text-xl text-gray-500 mb-3 max-w-lg leading-relaxed">
+            Tudo que seu negócio precisa em um só sistema.<br />
+            Gestão completa: notas, caixa, estoque e financeiro.<br />
+            Simples, inteligente e com suporte especializado.
           </p>
 
-          <div className="flex items-center gap-2 mb-7 text-sm text-gray-400 font-semibold">
+          <div className="flex items-center gap-2 mb-5 text-sm md:text-base text-gray-400 font-semibold">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
             Atendimento em <strong className="text-gray-600">todos os estados do Brasil</strong> — suporte até as 22h
           </div>
@@ -70,7 +71,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="relative"
+          className="relative lg:mt-0"
         >
           <div className="relative w-full max-w-[520px] md:max-w-[620px] lg:max-w-[800px] mx-auto">
             {/* Glow atrás */}
@@ -196,7 +197,7 @@ export default function Hero() {
             </div>
 
             {/* Botões de navegação — embaixo do mockup */}
-            <div className="flex justify-center gap-3 mt-7">
+            <div className="flex justify-center gap-3 mt-4">
               {screens.map((s, i) => (
                 <button
                   key={i}
@@ -216,7 +217,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div className="absolute bottom-4 left-1/2 -translate-x-1/2" animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+      <motion.div className="absolute bottom-2 left-1/2 -translate-x-1/2" animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
         <a href="#credibility" className="w-11 h-11 rounded-full border-2 border-purple-300 flex items-center justify-center text-purple-500 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M19 12l-7 7-7-7" /></svg>
         </a>
