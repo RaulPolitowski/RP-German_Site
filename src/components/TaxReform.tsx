@@ -31,7 +31,7 @@ export default function TaxReform() {
             <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white text-xl">🏛️</div>
             <div>
               <p className="font-extrabold text-xl text-gray-900">CBS</p>
-              <p className="text-sm text-gray-400">No automático</p>
+              <p className="text-sm text-gray-400">Cálculo automático</p>
             </div>
           </div>
           {/* BG decoration */}
@@ -41,22 +41,23 @@ export default function TaxReform() {
         {/* Text */}
         <FadeIn direction="left" className="flex-1">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
-            Juntos, a gente dá conta da{" "}
-            <span className="gradient-text">Reforma Tributária.</span>
+            Muitos sistemas ainda estão se adaptando.{" "}
+            <span className="gradient-text">O nosso já está pronto.</span>
           </h2>
           <p className="text-gray-500 text-lg mb-6 leading-relaxed">
-            Prepare-se para o novo modelo tributário sem dores de cabeça. Nosso sistema já está 100% adequado para a emissão de notas com IBS e CBS.
+            A Reforma Tributária trouxe novas regras, novos impostos e muita incerteza. Com a GermanTech, você emite notas com IBS e CBS calculados automaticamente — sem dor de cabeça e sem risco fiscal.
           </p>
           <ul className="space-y-3 mb-8">
-            {["Cálculo automático de impostos", "Novos campos da Reforma na NF-e & NFS-e", "Transição transparente para seu negócio"].map((item) => (
+            {["IBS e CBS calculados automaticamente", "NF-e e NFS-e já atualizadas com os novos campos", "Zero risco fiscal — conformidade desde o primeiro dia"].map((item) => (
               <li key={item} className="flex items-center gap-3 text-gray-700 font-semibold">
                 <span className="w-6 h-6 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-sm flex-shrink-0">✓</span>
                 {item}
               </li>
             ))}
           </ul>
+          <p className="text-gray-400 text-sm mb-6 italic">Comece já com um sistema que não vai te deixar na mão.</p>
           <a href="#contact" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200">
-            FALAR COM UMA CONSULTORA →
+            FALE COM UM ESPECIALISTA →
           </a>
         </FadeIn>
       </div>
