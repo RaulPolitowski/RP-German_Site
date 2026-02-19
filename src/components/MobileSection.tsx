@@ -23,9 +23,67 @@ export default function MobileSection() {
 
       <div className="max-w-7xl mx-auto px-5">
         <FadeIn className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Mobilidade Total para sua Gestão</h2>
-          <p className="text-gray-500 text-lg">Seu negócio não para, e sua gestão também não. Leve a GermanTech no bolso.</p>
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Tudo que você precisa para gerenciar seu negócio</h2>
+          <p className="text-gray-500 text-lg">Do financeiro ao ponto de venda, do desktop ao celular — soluções completas para cada etapa da sua operação.</p>
         </FadeIn>
+
+        {/* Painel do Gestor */}
+        <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
+          <FadeIn direction="right" className="flex-1">
+            <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">Painel do Gestor 2.0</span>
+            <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+              <span className="text-emerald-600">Visão completa</span> do seu negócio em uma única tela
+            </h3>
+            <p className="text-gray-500 mb-6 leading-relaxed">
+              Receitas, despesas, contas a pagar e receber, vencimentos e resultado — tudo em tempo real e de forma visual. Com inteligência artificial integrada, seus dados viram insights para tomar decisões mais rápidas e certeiras.
+            </p>
+            <ul className="space-y-3 mb-6">
+              {["Dashboard financeiro completo e intuitivo", "Inteligência artificial aplicada aos seus dados", "Contas a pagar e receber em tempo real", "Insights automáticos para decisões mais estratégicas"].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-gray-700 font-semibold">
+                  <span className="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">✓</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a href="https://wa.me/554530569087" className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-emerald-200">
+              QUERO CONHECER O PAINEL →
+            </a>
+          </FadeIn>
+          <FadeIn direction="left" className="flex-1 flex justify-center">
+            <div className="device-float relative w-full max-w-[560px] rounded-2xl overflow-hidden" style={{ boxShadow: "0 40px 80px rgba(0,0,0,0.2)" }}>
+              <Image src="/images/Paineldogestor.png" alt="Painel do Gestor GermanTech" width={1200} height={650} className="w-full h-auto rounded-2xl" />
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* PDV */}
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-24">
+          <FadeIn direction="left" className="flex-1">
+            <span className="inline-block bg-blue-100 text-blue-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">Ponto de Venda</span>
+            <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
+              <span className="text-blue-600">Poucos cliques</span> e a nota já sai em segundos
+            </h3>
+            <p className="text-gray-500 mb-6 leading-relaxed">
+              Um PDV completo, rápido e intuitivo. Seus funcionários aprendem em minutos e sua operação não para. Emissão de NF-e e NFC-e integrada, controle de caixa e muito mais.
+            </p>
+            <ul className="space-y-3 mb-6">
+              {["Emissão de NF-e e NFC-e em segundos", "Interface simples — qualquer pessoa opera", "Controle total do caixa e formas de pagamento", "Integração completa com estoque e financeiro"].map((f) => (
+                <li key={f} className="flex items-center gap-3 text-gray-700 font-semibold">
+                  <span className="w-5 h-5 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">✓</span>
+                  {f}
+                </li>
+              ))}
+            </ul>
+            <a href="https://wa.me/554530569087" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-blue-200">
+              SOLICITAR DEMONSTRAÇÃO →
+            </a>
+          </FadeIn>
+          <FadeIn direction="right" className="flex-1 flex justify-center">
+            <div className="device-float-alt relative w-full max-w-[560px] rounded-2xl overflow-hidden" style={{ boxShadow: "0 40px 80px rgba(0,0,0,0.2)" }}>
+              <Image src="/images/PDV.png" alt="PDV GermanTech" width={1200} height={650} className="w-full h-auto rounded-2xl" />
+            </div>
+          </FadeIn>
+        </div>
 
         {/* GermanTech Mobile */}
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
