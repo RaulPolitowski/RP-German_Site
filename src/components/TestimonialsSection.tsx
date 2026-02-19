@@ -18,8 +18,6 @@ const testimonials = [
   { src: "/images/testimonials/depoimento-08.jpeg", alt: "Cliente elogiando o atendimento top" },
   { src: "/images/testimonials/depoimento-13.jpeg", alt: "Cliente dizendo que o sistema é ótimo" },
   { src: "/images/testimonials/depoimento-09.jpeg", alt: "Cliente dizendo que a empresa é top" },
-  { src: "/images/testimonials/depoimento-14.jpeg", alt: "Depoimento de cliente sobre o sistema" },
-  { src: "/images/testimonials/depoimento-15.jpeg", alt: "Cliente satisfeito com o atendimento" },
   { src: "/images/testimonials/depoimento-16.jpeg", alt: "Depoimento positivo sobre a GermanTech" },
   { src: "/images/testimonials/depoimento-17.jpeg", alt: "Cliente recomendando o sistema" },
 ];
