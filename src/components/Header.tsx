@@ -56,7 +56,7 @@ export default function Header() {
             }}
             className="flex-shrink-0"
           >
-            <Image src="/images/logo.png" alt="GermanTech" width={160} height={35} className="h-8 w-auto" />
+            <Image src="/images/logo.png" alt="GermanTech" width={240} height={52} className="h-9 md:h-11 w-auto" />
           </a>
 
           {/* Desktop */}
