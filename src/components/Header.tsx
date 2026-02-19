@@ -7,7 +7,7 @@ const links = [
   { label: "Início", href: "#hero" },
   { label: "Planos e Módulos", href: "/planos.html" },
   { label: "Nossa História", href: "/nossa-historia.html" },
-  { label: "Trabalhe Conosco", href: "#contact" },
+  { label: "Trabalhe Conosco", href: "/trabalhe-conosco" },
 ];
 
 export default function Header() {

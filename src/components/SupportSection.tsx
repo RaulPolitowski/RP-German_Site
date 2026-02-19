@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
+import AnimatedCounter from "./AnimatedCounter";
 
 export default function SupportSection() {
   return (
@@ -17,27 +19,41 @@ export default function SupportSection() {
           {/* Números em destaque */}
           <div className="flex flex-wrap gap-6 mb-6">
             <div className="text-center">
-              <span className="text-4xl md:text-5xl font-extrabold text-white">30+</span>
+              <AnimatedCounter end={30} suffix="+" className="text-4xl md:text-5xl font-extrabold text-white" />
               <p className="text-purple-200 text-sm mt-1">Colaboradores</p>
             </div>
             <div className="text-center">
-              <span className="text-4xl md:text-5xl font-extrabold text-white">5</span>
+              <AnimatedCounter end={5} className="text-4xl md:text-5xl font-extrabold text-white" />
               <p className="text-purple-200 text-sm mt-1">Áreas especializadas</p>
             </div>
             <div className="text-center">
-              <span className="text-4xl md:text-5xl font-extrabold text-white">17+</span>
+              <AnimatedCounter end={17} suffix="+" className="text-4xl md:text-5xl font-extrabold text-white" />
               <p className="text-purple-200 text-sm mt-1">Anos de experiência</p>
             </div>
           </div>
 
           {/* Badges das áreas */}
-          <div className="flex flex-wrap lg:flex-nowrap gap-2 mb-6">
+          <motion.div
+            className="flex flex-wrap lg:flex-nowrap gap-2 mb-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          >
             {["Desenvolvimento", "Fiscal & Tributário", "Administrativo", "Consultoria", "Suporte Técnico"].map((area) => (
-              <span key={area} className="bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 whitespace-nowrap">
+              <motion.span
+                key={area}
+                variants={{
+                  hidden: { opacity: 0, y: 10, scale: 0.9 },
+                  visible: { opacity: 1, y: 0, scale: 1 },
+                }}
+                transition={{ duration: 0.4 }}
+                className="bg-white/15 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/20 whitespace-nowrap"
+              >
                 {area}
-              </span>
+              </motion.span>
             ))}
-          </div>
+          </motion.div>
 
           <p className="text-purple-200 mb-6">Sua empresa merece um parceiro, não apenas um sistema.</p>
 
