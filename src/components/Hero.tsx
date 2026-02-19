@@ -27,39 +27,41 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-6 lg:gap-4 items-center w-full">
         {/* Text */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative z-[2]">
-          <div className="flex flex-wrap items-center gap-2.5 mb-4">
-            <span className="relative overflow-hidden bg-purple-600 text-white text-xs font-black px-3.5 py-1.5 rounded-md tracking-wide uppercase">
+          <div className="flex flex-wrap items-center gap-2 md:gap-2.5 mb-3 md:mb-4">
+            <span className="relative overflow-hidden bg-purple-600 text-white text-[10px] md:text-xs font-black px-2.5 md:px-3.5 py-1 md:py-1.5 rounded-md tracking-wide uppercase">
               17+ anos
               <span className="badge-shimmer absolute inset-0 pointer-events-none" />
             </span>
-            <span className="bg-emerald-600 text-white text-xs font-black px-3.5 py-1.5 rounded-md tracking-wide uppercase flex items-center gap-1.5">
+            <span className="bg-emerald-600 text-white text-[10px] md:text-xs font-black px-2.5 md:px-3.5 py-1 md:py-1.5 rounded-md tracking-wide uppercase flex items-center gap-1.5">
               🇧🇷 Todo o Brasil
             </span>
             <span className="text-gray-500 text-sm md:text-base font-bold">+5.000 empresas confiam na GermanTech</span>
           </div>
 
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.08] text-gray-900 mb-4">
+          <h1 className="font-heading text-[1.75rem] md:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.1] md:leading-[1.08] text-gray-900 mb-3 md:mb-4">
             Eleve seu Negócio:{" "}
             <span className="gradient-text">Sistema de Gestão Empresarial</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-500 mb-3 max-w-lg leading-relaxed">
-            Tudo que seu negócio precisa em um só sistema.<br />
-            Gestão completa: notas, caixa, estoque e financeiro.<br />
+          <p className="text-base md:text-xl text-gray-500 mb-2 md:mb-3 max-w-lg leading-relaxed">
+            Tudo que seu negócio precisa em um só sistema.
+            <span className="hidden md:inline"><br /></span>{" "}
+            Gestão completa: notas, caixa, estoque e financeiro.
+            <span className="hidden md:inline"><br /></span>{" "}
             Simples, inteligente e com suporte especializado.
           </p>
 
-          <div className="flex items-center gap-2 mb-5 text-sm md:text-base text-gray-400 font-semibold">
+          <div className="flex items-center gap-2 mb-4 md:mb-5 text-sm md:text-base text-gray-400 font-semibold">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse" />
             Atendimento em <strong className="text-gray-600">todos os estados do Brasil</strong> — suporte até as 22h
           </div>
 
-          <div className="flex flex-wrap gap-4">
-            <a href="/planos.html" className="group relative overflow-hidden inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300">
+          <div className="flex flex-wrap gap-3 md:gap-4">
+            <a href="/planos.html" className="group relative overflow-hidden inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-5 md:px-7 py-3 md:py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300 text-sm md:text-base">
               <span className="badge-shimmer absolute inset-0 pointer-events-none" />
               Ver Soluções <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
-            <a href="https://wa.me/554530569087" className="inline-flex items-center gap-2 border-2 border-purple-300 text-purple-700 font-bold px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-all hover:-translate-y-0.5">
+            <a href="https://wa.me/554530569087" className="inline-flex items-center gap-2 border-2 border-purple-300 text-purple-700 font-bold px-5 md:px-7 py-3 md:py-3.5 rounded-xl hover:bg-purple-50 transition-all hover:-translate-y-0.5 text-sm md:text-base">
               Falar com um Especialista
             </a>
           </div>

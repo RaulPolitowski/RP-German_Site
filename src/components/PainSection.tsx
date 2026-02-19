@@ -30,12 +30,12 @@ const pains = [
 
 export default function PainSection() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gray-50 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-100/40 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5">
-        <FadeIn className="text-center mb-14">
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+        <FadeIn className="text-center mb-8 md:mb-14">
+          <h2 className="font-heading text-2xl md:text-4xl font-extrabold text-gray-900 mb-3 md:mb-4">
             Você ainda sofre com isso no seu negócio?
           </h2>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto">
@@ -43,10 +43,10 @@ export default function PainSection() {
           </p>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-6">
           {pains.map((p, i) => (
             <FadeIn key={p.title} delay={i * 0.1}>
-              <div className="group bg-white rounded-2xl p-7 border border-gray-100 hover:border-purple-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-100/40 relative overflow-hidden">
+              <div className="group bg-white rounded-2xl p-5 md:p-7 border border-gray-100 hover:border-purple-200 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-100/40 relative overflow-hidden">
                 {/* Left accent bar */}
                 <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-red-400 to-orange-400 group-hover:from-purple-500 group-hover:to-green-500 transition-all rounded-l-2xl" />
 

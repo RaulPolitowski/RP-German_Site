@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 
 export default function MobileSection() {
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-12 md:py-20 bg-gray-50 relative overflow-hidden">
       <style>{`
         @keyframes deviceFloat {
           0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -22,13 +22,13 @@ export default function MobileSection() {
       <div className="absolute bottom-0 left-[-10%] w-80 h-80 bg-orange-200/20 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-5">
-        <FadeIn className="text-center mb-16">
+        <FadeIn className="text-center mb-10 md:mb-16">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Tudo que você precisa para gerenciar seu negócio</h2>
           <p className="text-gray-500 text-lg">Do financeiro ao ponto de venda, do desktop ao celular — soluções completas para cada etapa da sua operação.</p>
         </FadeIn>
 
         {/* Painel do Gestor */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 mb-14 md:mb-24">
           <FadeIn direction="right" className="flex-1">
             <span className="inline-block bg-emerald-100 text-emerald-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">Painel do Gestor 2.0</span>
             <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
@@ -57,7 +57,7 @@ export default function MobileSection() {
         </div>
 
         {/* PDV */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-16 mb-24">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-16 mb-14 md:mb-24">
           <FadeIn direction="left" className="flex-1">
             <span className="inline-block bg-blue-100 text-blue-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">Ponto de Venda</span>
             <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
@@ -86,7 +86,7 @@ export default function MobileSection() {
         </div>
 
         {/* GermanTech Mobile */}
-        <div className="flex flex-col lg:flex-row items-center gap-16 mb-24">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-16 mb-14 md:mb-24">
           <FadeIn direction="right" className="flex-1">
             <span className="inline-block bg-purple-100 text-purple-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">GermanTech Mobile</span>
             <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
@@ -118,7 +118,7 @@ export default function MobileSection() {
         </div>
 
         {/* Gourmet Mobile */}
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-16">
           <FadeIn direction="left" className="flex-1">
             <span className="inline-block bg-orange-100 text-orange-700 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">Gourmet Mobile</span>
             <h3 className="font-heading text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
