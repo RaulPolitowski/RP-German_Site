@@ -23,8 +23,17 @@ export default function Header() {
 
   const handleAnchorClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
-      e.preventDefault();
       const id = href.slice(1);
+      const isHome = window.location.pathname === "/";
+
+      if (!isHome) {
+        e.preventDefault();
+        window.location.href = "/#" + id;
+        setMobileOpen(false);
+        return;
+      }
+
+      e.preventDefault();
       if (id === "hero") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
