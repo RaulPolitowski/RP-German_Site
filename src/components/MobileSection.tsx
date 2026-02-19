@@ -141,9 +141,9 @@ export default function MobileSection() {
           </FadeIn>
           <FadeIn direction="right" className="flex-1 flex justify-center w-full">
             {/* Tablet mockup */}
-            <div className="device-float-alt relative w-[90vw] max-w-[480px] rounded-[20px] bg-[#111] p-2 md:p-3 border-[6px] md:border-[8px] border-[#222]" style={{ boxShadow: "0 40px 80px rgba(0,0,0,0.2)", aspectRatio: "480/330" }}>
-              <div className="w-full h-full rounded-[12px] overflow-hidden bg-white relative">
-                <Image src="/images/uploaded_media_2_1769607319958.png" alt="Gourmet Mobile" fill className="object-cover" />
+            <div className="device-float-alt relative w-full max-w-[480px] rounded-[16px] md:rounded-[20px] bg-[#111] p-1.5 md:p-3 border-4 md:border-[8px] border-[#222]" style={{ boxShadow: "0 40px 80px rgba(0,0,0,0.2)" }}>
+              <div className="w-full rounded-[10px] md:rounded-[12px] overflow-hidden bg-white">
+                <Image src="/images/uploaded_media_2_1769607319958.png" alt="Gourmet Mobile" width={960} height={660} className="w-full h-auto block" />
               </div>
             </div>
           </FadeIn>
