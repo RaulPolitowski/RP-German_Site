@@ -1,49 +1,9 @@
 "use client";
-import { useState, FormEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-
-const areas = [
-  "Desenvolvimento",
-  "Suporte Técnico",
-  "Administrativo",
-  "Comercial",
-  "Outra",
-];
+import { motion } from "framer-motion";
 
 export default function TrabalheConosco() {
-  const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
-  const [error, setError] = useState("");
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSending(true);
-    setError("");
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const res = await fetch("/api/trabalhe-conosco", {
-        method: "POST",
-        body: formData,
-      });
-      const data = await res.json();
-      if (data.success) {
-        setSent(true);
-        form.reset();
-      } else {
-        setError(data.error || "Erro ao enviar. Tente novamente ou envie diretamente para raul@germantech.com.br");
-      }
-    } catch {
-      setError("Erro de conexão. Tente novamente ou envie diretamente para raul@germantech.com.br");
-    } finally {
-      setSending(false);
-    }
-  }
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-50">
       {/* Header */}
@@ -72,7 +32,8 @@ export default function TrabalheConosco() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">Conosco</span>
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Estamos sempre em busca de pessoas que querem crescer junto com a gente. Preencha o formulário abaixo e venha fazer parte de uma equipe com mais de 30 profissionais.
+            Estamos sempre em busca de pessoas que querem crescer junto com a gente.
+            Venha fazer parte de uma equipe com mais de 30 profissionais.
           </p>
         </motion.div>
       </section>
@@ -103,165 +64,54 @@ export default function TrabalheConosco() {
         </motion.div>
       </section>
 
-      {/* Formulário */}
-      <section className="max-w-2xl mx-auto px-5 pb-16">
-        <AnimatePresence mode="wait">
-          {sent ? (
-            <motion.div
-              key="success"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 md:p-12 text-center"
-            >
-              <span className="text-5xl mb-4 block">✅</span>
-              <h2 className="font-heading text-2xl font-extrabold text-emerald-800 mb-3">Currículo enviado com sucesso!</h2>
-              <p className="text-emerald-600 mb-6">
-                Recebemos suas informações e entraremos em contato em breve. Obrigado pelo interesse em fazer parte do time GermanTech!
-              </p>
-              <button
-                onClick={() => setSent(false)}
-                className="text-sm font-bold text-emerald-700 border border-emerald-300 px-5 py-2 rounded-full hover:bg-emerald-100 transition-all"
-              >
-                Enviar outro currículo
-              </button>
-            </motion.div>
-          ) : (
-            <motion.form
-              key="form"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              onSubmit={handleSubmit}
-              className="bg-white rounded-3xl border border-gray-100 shadow-lg p-6 md:p-10 space-y-5"
-            >
-              <h2 className="font-heading text-xl md:text-2xl font-extrabold text-gray-900 text-center mb-2">
-                Envie seu currículo
-              </h2>
+      {/* Card WhatsApp */}
+      <section className="max-w-xl mx-auto px-5 pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="bg-white rounded-3xl border border-gray-100 shadow-lg p-6 md:p-10 text-center"
+        >
+          <span className="text-5xl mb-4 block">💬</span>
+          <h2 className="font-heading text-xl md:text-2xl font-extrabold text-gray-900 mb-3">
+            Envie seu currículo pelo WhatsApp
+          </h2>
+          <p className="text-gray-500 text-sm md:text-base mb-6 leading-relaxed">
+            É rápido e simples. Basta enviar uma mensagem com as informações abaixo:
+          </p>
 
-              {/* Nome */}
-              <div>
-                <label htmlFor="name" className="block text-sm font-bold text-gray-700 mb-1.5">
-                  Nome completo *
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  placeholder="Seu nome completo"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
-                />
-              </div>
+          <div className="bg-gray-50 rounded-2xl p-5 mb-6 text-left space-y-2">
+            <p className="text-sm text-gray-700 font-semibold flex items-center gap-2">
+              <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">1</span>
+              Seu <strong>nome completo</strong>
+            </p>
+            <p className="text-sm text-gray-700 font-semibold flex items-center gap-2">
+              <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">2</span>
+              <strong>Cidade</strong> onde mora
+            </p>
+            <p className="text-sm text-gray-700 font-semibold flex items-center gap-2">
+              <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">3</span>
+              <strong>Área de interesse</strong> (Desenvolvimento, Suporte, Administrativo, Comercial...)
+            </p>
+            <p className="text-sm text-gray-700 font-semibold flex items-center gap-2">
+              <span className="w-5 h-5 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xs flex-shrink-0">4</span>
+              Seu <strong>currículo em PDF</strong> anexado na conversa
+            </p>
+          </div>
 
-              {/* Email e Telefone */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-1.5">
-                    E-mail *
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="seu@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-1.5">
-                    Telefone / WhatsApp *
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    required
-                    placeholder="(00) 00000-0000"
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
-                  />
-                </div>
-              </div>
+          <a
+            href="https://wa.me/5545998498928?text=Ol%C3%A1%21%20Tenho%20interesse%20em%20trabalhar%20na%20GermanTech.%0A%0ANome%3A%20%0ACidade%3A%20%0A%C3%81rea%20de%20interesse%3A%20%0A%0ASegue%20meu%20curr%C3%ADculo%20em%20anexo."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-extrabold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-green-200 text-lg"
+          >
+            ENVIAR PELO WHATSAPP →
+          </a>
 
-              {/* Cidade */}
-              <div>
-                <label htmlFor="city" className="block text-sm font-bold text-gray-700 mb-1.5">
-                  Cidade / Estado *
-                </label>
-                <input
-                  id="city"
-                  name="city"
-                  type="text"
-                  required
-                  placeholder="Ex: Cascavel - PR"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm"
-                />
-              </div>
-
-              {/* Área de interesse */}
-              <div>
-                <label htmlFor="area" className="block text-sm font-bold text-gray-700 mb-1.5">
-                  Área de interesse *
-                </label>
-                <select
-                  id="area"
-                  name="area"
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm bg-white"
-                >
-                  <option value="">Selecione uma área</option>
-                  {areas.map((a) => (
-                    <option key={a} value={a}>{a}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Mensagem */}
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-1.5">
-                  Conte um pouco sobre você
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  placeholder="Experiência, habilidades, por que quer trabalhar na GermanTech..."
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm resize-none"
-                />
-              </div>
-
-              {/* Upload do currículo */}
-              <div>
-                <label htmlFor="resume" className="block text-sm font-bold text-gray-700 mb-1.5">
-                  Anexar currículo (PDF, DOC, DOCX — máx. 5MB)
-                </label>
-                <input
-                  id="resume"
-                  name="resume"
-                  type="file"
-                  accept=".pdf,.doc,.docx"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-purple-400 focus:ring-2 focus:ring-purple-100 outline-none transition-all text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100 file:cursor-pointer"
-                />
-              </div>
-
-              {error && (
-                <p className="text-red-500 text-sm font-semibold text-center bg-red-50 p-3 rounded-xl">{error}</p>
-              )}
-
-              <button
-                type="submit"
-                disabled={sending}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200 disabled:opacity-60 disabled:cursor-not-allowed text-lg"
-              >
-                {sending ? "Enviando..." : "ENVIAR CURRÍCULO →"}
-              </button>
-
-              <p className="text-xs text-gray-400 text-center">
-                Seus dados serão utilizados exclusivamente para o processo seletivo.
-              </p>
-            </motion.form>
-          )}
-        </AnimatePresence>
+          <p className="text-xs text-gray-400 mt-4">
+            Seus dados serão utilizados exclusivamente para o processo seletivo.
+          </p>
+        </motion.div>
       </section>
 
       {/* Footer */}
