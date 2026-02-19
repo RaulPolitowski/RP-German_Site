@@ -38,7 +38,12 @@ export default function SegmentsScroller() {
           100% { transform: translateX(-50%); }
         }
         .animate-scroll-left {
-          animation: scroll-left 50s linear infinite;
+          animation: scroll-left 20s linear infinite;
+        }
+        @media (min-width: 768px) {
+          .animate-scroll-left {
+            animation: scroll-left 50s linear infinite;
+          }
         }
         .animate-scroll-left:hover {
           animation-play-state: paused;
