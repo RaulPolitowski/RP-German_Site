@@ -56,7 +56,7 @@ export default function TaxReform() {
             ))}
           </ul>
           <p className="text-gray-400 text-sm mb-6 italic">Comece já com um sistema que não vai te deixar na mão.</p>
-          <a href="#contact" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200">
+          <a href="https://wa.me/554530569087" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-7 py-3.5 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg shadow-purple-200">
             FALE COM UM ESPECIALISTA →
           </a>
         </FadeIn>

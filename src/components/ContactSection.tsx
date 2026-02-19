@@ -23,7 +23,7 @@ export default function ContactSection() {
 
                 <div className="space-y-5">
                   <a
-                    href="https://wa.me/5545984883365"
+                    href="https://wa.me/554598488365"
                     className="flex items-center justify-between gap-4 p-3 rounded-xl hover:bg-green-50 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
@@ -49,7 +49,7 @@ export default function ContactSection() {
                   </a>
 
                   <a
-                    href="https://wa.me/5545981567551"
+                    href="https://wa.me/554598156751"
                     className="flex items-center justify-between gap-4 p-3 rounded-xl hover:bg-green-50 transition-colors group"
                   >
                     <div className="flex items-center gap-3">

@@ -57,7 +57,7 @@ export default function SupportSection() {
 
           <p className="text-purple-200 mb-6">Sua empresa merece um parceiro, não apenas um sistema.</p>
 
-          <a href="https://wa.me/55459848-8365" className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-lg">
+          <a href="https://wa.me/554598488365" className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold px-7 py-3.5 rounded-xl hover:bg-gray-100 transition-all hover:-translate-y-0.5 shadow-lg">
             FALE COM UM ESPECIALISTA →
           </a>
         </FadeIn>
