@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 570" fill="none">
+  <defs>
+    <linearGradient id="lid" x1="450" y1="0" x2="450" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2d2d3a"/>
+      <stop offset="1" stop-color="#1b1b28"/>
+    </linearGradient>
+    <linearGradient id="bezel-shine" x1="450" y1="0" x2="450" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hinge" x1="450" y1="392" x2="450" y2="402" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8a8a96"/>
+      <stop offset="0.4" stop-color="#b8b8c6"/>
+      <stop offset="1" stop-color="#d2d2dc"/>
+    </linearGradient>
+    <linearGradient id="deck" x1="450" y1="402" x2="450" y2="556" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d8d8e0"/>
+      <stop offset="0.3" stop-color="#ccccd6"/>
+      <stop offset="1" stop-color="#c0c0cc"/>
+    </linearGradient>
+    <linearGradient id="deck-edge" x1="450" y1="556" x2="450" y2="566" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b0b0bc"/>
+      <stop offset="1" stop-color="#a0a0ac"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#333340"/>
+      <stop offset="1" stop-color="#26263a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Lid (screen housing) -->
+  <rect x="80" y="8" width="740" height="384" rx="14" fill="url(#lid)"/>
+  <rect x="80" y="8" width="740" height="384" rx="14" fill="url(#bezel-shine)"/>
+
+  <!-- Camera dot -->
+  <circle cx="450" cy="22" r="3.5" fill="#3a3a4a" stroke="#4a4a5a" stroke-width="0.8"/>
+
+  <!-- Screen area — black placeholder where screenshot overlays -->
+  <rect id="screen" x="96" y="30" width="708" height="350" rx="5" fill="#000"/>
+
+  <!-- Hinge -->
+  <rect x="100" y="392" width="700" height="10" rx="2" fill="url(#hinge)"/>
+
+  <!-- Deck / Base -->
+  <path d="M50 402 H850 Q860 402 860 412 V548 Q860 556 850 556 H50 Q40 556 40 548 V412 Q40 402 50 402 Z" fill="url(#deck)"/>
+  <rect x="40" y="402" width="820" height="1.5" rx="0.5" fill="#fff" opacity="0.3"/>
+
+  <!-- KEYBOARD — Row 1: Function keys -->
+  <g opacity="0.9">
+    <rect x="90" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="130" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="170" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="210" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="250" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="290" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="330" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="370" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="410" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="450" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="490" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="530" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="570" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="610" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="650" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="690" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="730" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+    <rect x="770" y="416" width="36" height="13" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Row 2: Number row -->
+  <g opacity="0.9">
+    <rect x="90" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="130" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="170" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="210" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="250" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="290" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="330" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="370" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="410" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="450" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="490" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="530" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="570" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="610" y="433" width="56" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="670" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="710" y="433" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="750" y="433" width="56" height="18" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Row 3: QWERTY -->
+  <g opacity="0.9">
+    <rect x="90" y="455" width="50" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="144" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="184" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="224" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="264" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="304" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="344" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="384" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="424" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="464" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="504" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="544" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="584" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="624" y="455" width="42" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="670" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="710" y="455" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="750" y="455" width="56" height="18" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Row 4: Home row -->
+  <g opacity="0.9">
+    <rect x="90" y="477" width="58" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="152" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="192" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="232" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="272" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="312" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="352" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="392" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="432" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="472" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="512" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="552" y="477" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="592" y="477" width="74" height="18" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Row 5: Shift row -->
+  <g opacity="0.9">
+    <rect x="90" y="499" width="74" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="168" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="208" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="248" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="288" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="328" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="368" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="408" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="448" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="488" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="528" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="568" y="499" width="74" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="660" y="499" width="36" height="18" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Row 6: Spacebar row -->
+  <g opacity="0.9">
+    <rect x="90" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="130" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="170" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="210" y="521" width="46" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="260" y="521" width="224" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="488" y="521" width="46" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="538" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="620" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="660" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+    <rect x="700" y="521" width="36" height="18" rx="2.5" fill="url(#key)"/>
+  </g>
+
+  <!-- Key shine (subtle light) -->
+  <rect x="88" y="414" width="660" height="128" rx="4" fill="#fff" opacity="0.06"/>
+
+  <!-- Bottom edge -->
+  <rect x="50" y="556" width="800" height="6" rx="3" fill="url(#deck-edge)"/>
+</svg>

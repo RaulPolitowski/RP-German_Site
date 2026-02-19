@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="glow-orb absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-400/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-orb absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] bg-violet-400/10 rounded-full blur-[100px] pointer-events-none" style={{ animationDelay: "3s" }} />
 
-      <div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-10 items-center w-full">
+      <div className="max-w-7xl mx-auto px-5 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center w-full">
         {/* Text */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative z-[2]">
           <div className="flex flex-wrap items-center gap-2.5 mb-6">
@@ -62,49 +62,51 @@ export default function Hero() {
               Falar com um Especialista
             </a>
           </div>
+
         </motion.div>
 
-        {/* Devices Mockup */}
+        {/* ===== DEVICES SHOWCASE ===== */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="relative hidden lg:block"
+          className="relative"
         >
-          <div className="relative w-full max-w-[620px] mx-auto">
-            {/* Glow */}
-            <div className="absolute -inset-6 bg-purple-400/8 rounded-[50px] blur-3xl pointer-events-none" />
+          <div className="relative w-full max-w-[520px] md:max-w-[620px] lg:max-w-[800px] mx-auto">
+            {/* Glow atrás */}
+            <div className="absolute -inset-10 bg-purple-400/10 rounded-[60px] blur-3xl pointer-events-none" />
 
-            <div className="flex items-end gap-5">
-              {/* ========== NOTEBOOK ========== */}
-              <div className={`relative flex-1 transition-all duration-500 ${screens[current].device === "phone" ? "opacity-60 scale-[0.92]" : "opacity-100 scale-100"}`}>
-
-                {/* Tela (lid) */}
+            {/* Dispositivos lado a lado */}
+            <div className="flex items-end gap-4 lg:gap-5">
+              {/* ======= NOTEBOOK ======= */}
+              <div className={`relative flex-1 z-10 transition-all duration-500 ${screens[current].device === "phone" ? "opacity-50 scale-[0.96]" : "opacity-100 scale-100"}`}>
+                {/* Tela */}
                 <div
-                  className="relative rounded-t-[10px] p-[7px] pb-[10px]"
+                  className="relative rounded-t-[10px] md:rounded-t-[14px]"
                   style={{
-                    background: "linear-gradient(180deg, #2a2a38 0%, #1a1a26 100%)",
-                    boxShadow: "0 2px 10px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.05)",
+                    padding: "6px 6px 10px 6px",
+                    background: "linear-gradient(180deg, #232334 0%, #1a1a2a 100%)",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.04)",
                   }}
                 >
-                  <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] bg-[#3a3a4a] rounded-full border border-[#4a4a5a]" />
+                  <div className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] md:w-[6px] md:h-[6px] rounded-full bg-[#2a2a3a] border border-[#3d3d4d]" />
 
-                  <div className="relative rounded-[3px] overflow-hidden aspect-[16/10] bg-black">
+                  <div className="relative overflow-hidden rounded-[4px] md:rounded-[5px] aspect-[16/10] bg-[#0a0a14]">
                     <AnimatePresence mode="wait">
                       {screens[current].device === "notebook" && (
                         <motion.div
                           key={current}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
+                          initial={{ opacity: 0, scale: 1.02 }}
+                          animate={{ opacity: 1, scale: 1 }}
                           exit={{ opacity: 0 }}
-                          transition={{ duration: 0.7 }}
+                          transition={{ duration: 0.6 }}
                           className="absolute inset-0"
                         >
                           <Image
                             src={screens[current].src}
                             alt={screens[current].label}
                             fill
-                            sizes="480px"
+                            sizes="(max-width: 768px) 420px, (max-width: 1024px) 500px, 650px"
                             className="object-fill"
                             priority
                           />
@@ -116,72 +118,40 @@ export default function Hero() {
                         <span className="text-white/20 font-heading font-bold text-lg tracking-wider">GERMAN TECH</span>
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none" />
                   </div>
                 </div>
 
-                {/* Dobradiça */}
-                <div
-                  className="h-[5px] mx-[2%]"
-                  style={{ background: "linear-gradient(180deg, #909099 0%, #b5b5c0 50%, #ccccd4 100%)", borderRadius: "0 0 2px 2px" }}
-                />
-
-                {/* Teclado (keyboard deck) */}
-                <div
-                  className="relative mx-[-3%] rounded-b-[10px] overflow-hidden"
-                  style={{
-                    background: "linear-gradient(180deg, #d2d2da 0%, #c0c0cc 100%)",
-                    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                    height: 52,
-                  }}
-                >
-                  {/* Teclas grid */}
-                  <div className="absolute inset-0 px-[10px] pt-[6px] pb-[14px] flex flex-col gap-[3px]">
-                    {[0, 1, 2, 3].map((row) => (
-                      <div key={row} className="flex gap-[3px] flex-1">
-                        {Array.from({ length: row === 3 ? 8 : 14 }).map((_, col) => (
-                          <div
-                            key={col}
-                            className={`rounded-[2px] ${row === 3 && col === 3 ? "flex-[4]" : "flex-1"}`}
-                            style={{
-                              background: "linear-gradient(180deg, #bbbbc5 0%, #adadb8 100%)",
-                              boxShadow: "0 1px 0 rgba(0,0,0,0.06), inset 0 1px 0 rgba(255,255,255,0.3)",
-                            }}
-                          />
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Trackpad */}
-                  <div className="absolute bottom-[3px] left-1/2 -translate-x-1/2 w-[90px] h-[2px] bg-[#b0b0bc] rounded-full" />
+                {/* Base fina */}
+                <div className="relative mx-[-4%]">
+                  <div className="mx-[14%] h-[4px] md:h-[5px]" style={{ background: "linear-gradient(180deg, #858590 0%, #b5b5c2 50%, #d0d0d8 100%)", borderRadius: "0 0 2px 2px" }} />
+                  <div style={{ height: 8, background: "linear-gradient(180deg, #d2d2da 0%, #c2c2cc 60%, #b8b8c4 100%)", borderRadius: "0 0 8px 8px", boxShadow: "0 3px 12px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.5)" }} />
+                  <div className="mx-[1%] h-[2px]" style={{ background: "linear-gradient(180deg, #ababb6 0%, #9a9aa6 100%)", borderRadius: "0 0 6px 6px" }} />
                 </div>
 
-                {/* Borda inferior da base */}
-                <div
-                  className="h-[3px] mx-[1%]"
-                  style={{ background: "linear-gradient(180deg, #b0b0bc 0%, #a0a0ac 100%)", borderRadius: "0 0 6px 6px" }}
-                />
-
-                {/* Sombra notebook */}
-                <div className="absolute -bottom-4 left-[3%] right-[3%] h-5 bg-black/[0.06] blur-xl rounded-[50%]" />
+                <div className="absolute -bottom-4 left-[2%] right-[2%] h-6 bg-black/[0.06] blur-xl rounded-[50%]" />
               </div>
 
-              {/* ========== CELULAR ========== */}
-              <div className={`relative flex-shrink-0 transition-all duration-500 ${screens[current].device === "phone" ? "scale-105 z-10" : "scale-100 z-0"}`}>
+              {/* ======= CELULAR (ao lado, com efeito de destaque) ======= */}
+              <div className={`relative flex-shrink-0 transition-all duration-500 ${
+                screens[current].device === "phone"
+                  ? "scale-110 -translate-y-2 z-20"
+                  : "scale-100 translate-y-0 z-0"
+              }`}>
                 <div
-                  className="relative w-[120px] h-[248px] rounded-[18px] p-[5px]"
+                  className="w-[85px] h-[175px] md:w-[105px] md:h-[218px] lg:w-[125px] lg:h-[260px] rounded-[14px] md:rounded-[18px] lg:rounded-[22px] p-[3px] md:p-[4px] lg:p-[5px]"
                   style={{
-                    background: "linear-gradient(180deg, #2a2a38 0%, #1a1a26 100%)",
-                    boxShadow: "0 20px 50px rgba(0,0,0,0.25)",
-                    border: "3px solid #333",
+                    background: "linear-gradient(180deg, #1e1e2e 0%, #141420 100%)",
+                    boxShadow: screens[current].device === "phone"
+                      ? "0 20px 60px rgba(124, 58, 237, 0.3), 0 10px 30px rgba(0,0,0,0.2)"
+                      : "0 16px 48px rgba(0,0,0,0.2)",
+                    border: "2px solid #2a2a3a",
+                    transition: "box-shadow 0.5s",
                   }}
                 >
-                  {/* Notch */}
-                  <div className="absolute top-[5px] left-1/2 -translate-x-1/2 w-[30px] h-[4px] bg-[#1a1a26] rounded-full z-10" />
+                  <div className="absolute top-[5px] lg:top-[7px] left-1/2 -translate-x-1/2 w-[22px] lg:w-[28px] h-[3px] lg:h-[4px] bg-[#0a0a14] rounded-full z-10" />
 
-                  {/* Tela do celular */}
-                  <div className="w-full h-full rounded-[13px] overflow-hidden bg-black relative">
+                  <div className="w-full h-full rounded-[11px] md:rounded-[14px] lg:rounded-[19px] overflow-hidden bg-[#0a0a14] relative">
                     <AnimatePresence mode="wait">
                       {screens[current].device === "phone" ? (
                         <motion.div
@@ -196,7 +166,7 @@ export default function Hero() {
                             src={screens[current].src}
                             alt="GermanTech Mobile"
                             fill
-                            sizes="120px"
+                            sizes="(max-width: 768px) 90px, (max-width: 1024px) 110px, 135px"
                             className="object-cover object-top"
                           />
                         </motion.div>
@@ -211,22 +181,22 @@ export default function Hero() {
                             src="/images/uploaded_media_1_1769607319958.jpg"
                             alt="GermanTech Mobile"
                             fill
-                            sizes="120px"
-                            className="object-cover object-top opacity-70"
+                            sizes="(max-width: 768px) 90px, (max-width: 1024px) 110px, 135px"
+                            className="object-cover object-top opacity-80"
                           />
                         </motion.div>
                       )}
                     </AnimatePresence>
                   </div>
                 </div>
-
-                {/* Sombra celular */}
-                <div className="absolute -bottom-3 left-[10%] right-[10%] h-4 bg-black/[0.08] blur-lg rounded-[50%]" />
+                <div className={`absolute -bottom-2 left-[10%] right-[10%] h-4 rounded-[50%] blur-lg transition-all duration-500 ${
+                  screens[current].device === "phone" ? "bg-purple-500/15" : "bg-black/[0.08]"
+                }`} />
               </div>
             </div>
 
-            {/* Botões de navegação */}
-            <div className="flex justify-center gap-3 mt-8">
+            {/* Botões de navegação — embaixo do mockup */}
+            <div className="flex justify-center gap-3 mt-7">
               {screens.map((s, i) => (
                 <button
                   key={i}
