@@ -9,6 +9,7 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import PDVSection from "@/components/PDVSection";
 import MobileSection from "@/components/MobileSection";
 import SupportSection from "@/components/SupportSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -26,6 +27,7 @@ export default function Home() {
       <PDVSection />
       <MobileSection />
       <SupportSection />
+      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </>
