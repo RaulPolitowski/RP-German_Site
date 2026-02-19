@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 const stats = [
   { value: 17, suffix: "+", label: "Anos de\nMercado", icon: "🏆" },
   { value: 5000, suffix: "+", label: "Empresas\nAtendidas", icon: "🏢" },
-  { label: "Suporte\nTodo Dia", display: "22h", icon: "🎧" },
+  { label: "Suporte\ntodo dia", display: "Até 22h", icon: "🎧" },
   { label: "Avaliação\ndos Clientes", display: "4.9/5", icon: "⭐" },
 ];
 
