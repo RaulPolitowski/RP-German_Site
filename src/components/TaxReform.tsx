@@ -19,23 +19,23 @@ export default function TaxReform() {
 
       <div className="max-w-7xl mx-auto px-5 flex flex-col lg:flex-row items-center gap-16">
         {/* Visual */}
-        <div className="flex-1 relative min-h-[350px] flex items-center justify-center">
-          <div className="tax-card-1 bg-white rounded-3xl shadow-xl shadow-purple-100/50 border border-purple-100 px-8 py-6 flex items-center gap-5 absolute top-[10%] left-[5%]">
-            <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white text-xl">📊</div>
+        <div className="w-full lg:flex-1 relative flex flex-col sm:flex-row lg:block items-center justify-center gap-4 lg:min-h-[350px] mb-8 lg:mb-0">
+          <div className="tax-card-1 bg-white w-full max-w-[320px] lg:max-w-none rounded-3xl shadow-xl shadow-purple-100/50 border border-purple-100 p-5 lg:px-8 lg:py-6 flex items-center gap-4 lg:gap-5 lg:absolute lg:top-[10%] lg:left-[5%] z-10 relative">
+            <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-white text-lg lg:text-xl flex-shrink-0">📊</div>
             <div>
-              <p className="font-extrabold text-xl text-gray-900">IBS</p>
-              <p className="text-sm text-gray-400">Calculado Automaticamente</p>
+              <p className="font-extrabold text-lg lg:text-xl text-gray-900 leading-none mb-1">IBS</p>
+              <p className="text-[13px] lg:text-sm text-gray-500 leading-tight">Calculado automaticamente</p>
             </div>
           </div>
-          <div className="tax-card-2 bg-white rounded-3xl shadow-xl shadow-purple-100/50 border border-purple-100 px-8 py-6 flex items-center gap-5 absolute bottom-[15%] right-[5%]">
-            <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center text-white text-xl">🏛️</div>
+          <div className="tax-card-2 bg-white w-full max-w-[320px] lg:max-w-none rounded-3xl shadow-xl shadow-purple-100/50 border border-purple-100 p-5 lg:px-8 lg:py-6 flex items-center gap-4 lg:gap-5 lg:absolute lg:bottom-[15%] lg:right-[5%] z-10 relative">
+            <div className="w-12 h-12 lg:w-14 lg:h-14 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-white text-lg lg:text-xl flex-shrink-0">🏛️</div>
             <div>
-              <p className="font-extrabold text-xl text-gray-900">CBS</p>
-              <p className="text-sm text-gray-400">Cálculo automático</p>
+              <p className="font-extrabold text-lg lg:text-xl text-gray-900 leading-none mb-1">CBS</p>
+              <p className="text-[13px] lg:text-sm text-gray-500 leading-tight">Cálculo automático</p>
             </div>
           </div>
           {/* BG decoration */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] font-extrabold text-purple-100 select-none pointer-events-none opacity-40">%</div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[10rem] lg:text-[14rem] font-extrabold text-purple-100 select-none pointer-events-none opacity-40 z-0">%</div>
         </div>
 
         {/* Text */}

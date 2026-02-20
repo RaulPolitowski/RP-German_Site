@@ -14,49 +14,49 @@ export default function ContactSection() {
           <FadeIn delay={0.1}>
             <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden h-full">
               <div className="h-1.5 bg-purple-600 w-full" />
-              <div className="p-8">
+              <div className="p-5 md:p-8">
                 <h3 className="text-center mb-8">
                   <span className="text-purple-600 font-bold text-lg">É cliente German Tech</span>
                   <br />
                   <span className="text-gray-700 font-semibold">e está precisando de ajuda?</span>
                 </h3>
 
-                <div className="space-y-5">
+                <div className="space-y-4 md:space-y-5">
                   <a
                     href="https://wa.me/554598488365"
-                    className="flex items-center justify-between gap-4 p-3 rounded-xl hover:bg-green-50 transition-colors group"
+                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 p-4 sm:p-3 rounded-xl bg-gray-50 sm:bg-transparent hover:bg-green-50 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-xl">🎧</span>
                       <span className="font-semibold text-gray-700 text-sm">Suporte Especializado</span>
                     </div>
-                    <span className="bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-full transition-all group-hover:-translate-y-0.5 whitespace-nowrap flex items-center justify-center gap-1.5 min-w-[200px]">
+                    <span className="w-full sm:w-auto bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 px-4 rounded-full transition-all sm:group-hover:-translate-y-0.5 flex items-center justify-center gap-1.5 sm:min-w-[200px]">
                       💬 Chamar via WhatsApp
                     </span>
                   </a>
 
                   <a
                     href="https://wa.me/554530569017"
-                    className="flex items-center justify-between gap-4 p-3 rounded-xl hover:bg-green-50 transition-colors group"
+                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 p-4 sm:p-3 rounded-xl bg-gray-50 sm:bg-transparent hover:bg-green-50 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-xl">💲</span>
                       <span className="font-semibold text-gray-700 text-sm">Financeiro</span>
                     </div>
-                    <span className="bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-full transition-all group-hover:-translate-y-0.5 whitespace-nowrap flex items-center justify-center gap-1.5 min-w-[200px]">
+                    <span className="w-full sm:w-auto bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 px-4 rounded-full transition-all sm:group-hover:-translate-y-0.5 flex items-center justify-center gap-1.5 sm:min-w-[200px]">
                       💬 Chamar via WhatsApp
                     </span>
                   </a>
 
                   <a
                     href="https://wa.me/554598156751"
-                    className="flex items-center justify-between gap-4 p-3 rounded-xl hover:bg-green-50 transition-colors group"
+                    className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 p-4 sm:p-3 rounded-xl bg-gray-50 sm:bg-transparent hover:bg-green-50 transition-colors group"
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-xl">⭐</span>
                       <span className="font-semibold text-gray-700 text-sm">Setor de Qualidade</span>
                     </div>
-                    <span className="bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 rounded-full transition-all group-hover:-translate-y-0.5 whitespace-nowrap flex items-center justify-center gap-1.5 min-w-[200px]">
+                    <span className="w-full sm:w-auto bg-green-500 group-hover:bg-green-600 text-white text-xs font-bold py-2.5 px-4 rounded-full transition-all sm:group-hover:-translate-y-0.5 flex items-center justify-center gap-1.5 sm:min-w-[200px]">
                       💬 Avaliar Atendimento
                     </span>
                   </a>
@@ -69,40 +69,40 @@ export default function ContactSection() {
           <FadeIn delay={0.2}>
             <div className="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden h-full">
               <div className="h-1.5 bg-gray-800 w-full" />
-              <div className="p-8">
+              <div className="p-5 md:p-8 flex flex-col h-[calc(100%-0.375rem)]">
                 <h3 className="text-center mb-2">
                   <span className="font-bold text-lg text-gray-900">Ainda não é cliente</span>
                 </h3>
-                <p className="text-gray-400 text-sm text-center mb-8">Fale com nossa equipe comercial</p>
+                <p className="text-gray-400 text-sm text-center mb-6 md:mb-8">Fale com nossa equipe comercial</p>
 
-                <div className="space-y-5">
-                  <div className="flex items-start gap-4">
+                <div className="space-y-4 md:space-y-5 flex-1">
+                  <div className="flex items-start gap-3 sm:gap-4 bg-gray-50 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none">
                     <span className="text-xl mt-0.5">📞</span>
                     <div>
-                      <p className="font-bold text-sm text-gray-800">(45) 3056-9087</p>
-                      <p className="text-xs text-gray-400">Horário comercial das 8:00 às 18:00</p>
+                      <p className="font-bold text-sm text-gray-800 break-all sm:break-normal">(45) 3056-9087</p>
+                      <p className="text-xs text-gray-500">Comercial das 8:00 às 18:00</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4 bg-gray-50 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none">
                     <span className="text-xl mt-0.5">✉️</span>
                     <div>
-                      <p className="font-bold text-sm text-gray-800">comercial@germantech.com.br</p>
+                      <p className="font-bold text-sm text-gray-800 break-all sm:break-normal">comercial@germantech.com.br</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4 bg-gray-50 sm:bg-transparent p-4 sm:p-0 rounded-xl sm:rounded-none">
                     <span className="text-xl mt-0.5">💬</span>
                     <div>
-                      <p className="font-bold text-sm text-gray-800">WhatsApp</p>
-                      <p className="text-xs text-gray-400">Horário comercial das 8:00 às 18:00</p>
+                      <p className="font-bold text-sm text-gray-800 break-all sm:break-normal">WhatsApp</p>
+                      <p className="text-xs text-gray-500">Comercial das 8:00 às 18:00</p>
                     </div>
                   </div>
                 </div>
 
                 <a
                   href="https://wa.me/554530569087"
-                  className="block mt-8 text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-md shadow-green-200"
+                  className="block mt-6 md:mt-8 text-center bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 rounded-full transition-all hover:-translate-y-0.5 shadow-md shadow-green-200 w-full"
                 >
                   Chamar no WhatsApp
                 </a>

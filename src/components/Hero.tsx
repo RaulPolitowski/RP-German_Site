@@ -2,6 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Particles from "./Particles";
 
 const screens = [
   { src: "/images/desktop-screen.png", label: "Desktop", device: "notebook" },
@@ -20,6 +21,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-[80vh] flex items-center pt-14 pb-0 overflow-hidden">
+      <Particles />
       <div className="tech-grid absolute inset-0 pointer-events-none" />
       <div className="glow-orb absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-purple-400/20 rounded-full blur-[100px] pointer-events-none" />
       <div className="glow-orb absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] bg-violet-400/10 rounded-full blur-[100px] pointer-events-none" style={{ animationDelay: "3s" }} />
@@ -70,10 +72,11 @@ export default function Hero() {
 
         {/* ===== DEVICES SHOWCASE ===== */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3 }}
+          initial={{ opacity: 0, y: 60, rotateX: 10, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
           className="relative lg:mt-0"
+          style={{ perspective: 1200 }}
         >
           <div className="relative w-full max-w-[520px] md:max-w-[620px] lg:max-w-[800px] mx-auto">
             {/* Glow atrás */}
@@ -83,16 +86,26 @@ export default function Hero() {
             <div className="flex items-end gap-4 lg:gap-5">
               {/* ======= NOTEBOOK ======= */}
               <div className={`relative flex-1 z-10 transition-all duration-500 ${screens[current].device === "phone" ? "opacity-50 scale-[0.96]" : "opacity-100 scale-100"}`}>
-                {/* Tela */}
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  className="relative"
+                >
+                  {/* Tela */}
                 <div
                   className="relative rounded-t-[10px] md:rounded-t-[14px]"
                   style={{
-                    padding: "6px 6px 10px 6px",
-                    background: "linear-gradient(180deg, #232334 0%, #1a1a2a 100%)",
-                    boxShadow: "0 4px 20px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.04)",
+                    padding: "8px 8px 12px 8px",
+                    background: "#050505",
+                    border: "1px solid #2a2a2a",
+                    borderBottom: "none",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.1)",
                   }}
                 >
-                  <div className="absolute top-[2px] left-1/2 -translate-x-1/2 w-[5px] h-[5px] md:w-[6px] md:h-[6px] rounded-full bg-[#2a2a3a] border border-[#3d3d4d]" />
+                  {/* Webcam Lens */}
+                  <div className="absolute top-[3px] md:top-[4px] left-1/2 -translate-x-1/2 w-[4px] h-[4px] md:w-[5px] md:h-[5px] rounded-full bg-[#111] flex items-center justify-center border border-[#1a1a1a]">
+                    <div className="w-[1.5px] h-[1.5px] rounded-full bg-[#1e1e90] blur-[0.5px]" />
+                  </div>
 
                   <div className="relative overflow-hidden rounded-[4px] md:rounded-[5px] aspect-[16/10] bg-[#0a0a14]">
                     <AnimatePresence mode="wait">
@@ -122,17 +135,47 @@ export default function Hero() {
                       </div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent pointer-events-none" />
+                    
+                    {/* Efeito Sweep de Vidro */}
+                    <div className="absolute inset-0 pointer-events-none overflow-hidden z-20 mix-blend-overlay">
+                      <motion.div
+                        animate={{ x: ["-200%", "300%"] }}
+                        transition={{ repeat: Infinity, duration: 2.5, repeatDelay: 6, ease: "linear" }}
+                        className="absolute top-0 bottom-0 w-[50%] bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-20deg]"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                {/* Base fina */}
-                <div className="relative mx-[-4%]">
-                  <div className="mx-[14%] h-[4px] md:h-[5px]" style={{ background: "linear-gradient(180deg, #858590 0%, #b5b5c2 50%, #d0d0d8 100%)", borderRadius: "0 0 2px 2px" }} />
-                  <div style={{ height: 8, background: "linear-gradient(180deg, #d2d2da 0%, #c2c2cc 60%, #b8b8c4 100%)", borderRadius: "0 0 8px 8px", boxShadow: "0 3px 12px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.5)" }} />
-                  <div className="mx-[1%] h-[2px]" style={{ background: "linear-gradient(180deg, #ababb6 0%, #9a9aa6 100%)", borderRadius: "0 0 6px 6px" }} />
+                {/* Base do Notebook (MacBook Style) */}
+                <div className="relative z-10 w-[104%] left-[-2%]">
+                  {/* Linha de brilho superior do corpo de alumínio */}
+                  <div className="absolute top-0 inset-x-0 h-[1px] bg-white/60 z-20" />
+                  
+                  {/* Frente do corpo metálico */}
+                  <div 
+                    className="relative w-full h-[8px] md:h-[12px] bg-gradient-to-b from-[#e0e0e0] via-[#c4c4c4] to-[#999999]"
+                    style={{ 
+                      borderRadius: "0 0 12px 12px",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.8)"
+                    }}
+                  >
+                    {/* Notch para abrir o notebook */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[12%] h-[3px] md:h-[4px] bg-[#a3a3a3] rounded-b-[4px] shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]" />
+                  </div>
+                  
+                  {/* Sombra inferior suave do próprio corpo metálico */}
+                  <div className="absolute -bottom-1 inset-x-[2%] h-[4px] bg-black/20 blur-[2px] rounded-b-full" />
                 </div>
 
-                <div className="absolute -bottom-4 left-[2%] right-[2%] h-6 bg-black/[0.06] blur-xl rounded-[50%]" />
+                </motion.div>
+
+                {/* Sombra Dinâmica do Notebook */}
+                <motion.div 
+                  animate={{ scale: [1, 0.9, 1], opacity: [0.5, 0.2, 0.5] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  className="absolute -bottom-6 left-[5%] right-[5%] h-6 bg-black/40 blur-xl rounded-[100%] z-[-1]" 
+                />
               </div>
 
               {/* ======= CELULAR (ao lado, com efeito de destaque) ======= */}
@@ -141,7 +184,12 @@ export default function Hero() {
                   ? "scale-110 -translate-y-2 z-20"
                   : "scale-100 translate-y-0 z-0"
               }`}>
-                <div
+                <motion.div
+                  animate={{ y: [0, -12, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+                  className="relative"
+                >
+                  <div
                   className="w-[85px] h-[175px] md:w-[105px] md:h-[218px] lg:w-[125px] lg:h-[260px] rounded-[14px] md:rounded-[18px] lg:rounded-[22px] p-[3px] md:p-[4px] lg:p-[5px]"
                   style={{
                     background: "linear-gradient(180deg, #1e1e2e 0%, #141420 100%)",
@@ -192,9 +240,15 @@ export default function Hero() {
                     </AnimatePresence>
                   </div>
                 </div>
-                <div className={`absolute -bottom-2 left-[10%] right-[10%] h-4 rounded-[50%] blur-lg transition-all duration-500 ${
-                  screens[current].device === "phone" ? "bg-purple-500/15" : "bg-black/[0.08]"
-                }`} />
+                </motion.div>
+                {/* Sombra Dinâmica do Celular */}
+                <motion.div 
+                  animate={{ scale: [1, 0.8, 1], opacity: [0.6, 0.2, 0.6] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
+                  className={`absolute -bottom-4 left-[10%] right-[10%] h-4 rounded-[100%] blur-lg transition-all duration-500 z-[-1] ${
+                    screens[current].device === "phone" ? "bg-purple-500/30" : "bg-black/30"
+                  }`} 
+                />
               </div>
             </div>
 
